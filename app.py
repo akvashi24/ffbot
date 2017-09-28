@@ -2,10 +2,8 @@ import os
 import json
 
 from espnff import League 
-
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
-
 from flask import Flask, request
 
 app = Flask(vashi-fantasybot)
@@ -14,9 +12,9 @@ app = Flask(vashi-fantasybot)
 def webhook():
 	data = request.get_json()
 
-	if data['name'] != 'fantasyTester':
-		bot_id = os.environ["FF-GM-ID"]
-   		league_id = os.environ["ESPN-ID"]
+	if data['name'] != 'fantasyTester' and data['text'] = 'scoreboard':
+		bot_id = os.getenv("FF-GM-ID")
+   		league_id = os.getenv("ESPN-ID")
     	year = 2017
 		msg = get_scoreboard(league_id, year)
 		send_message(msg)
