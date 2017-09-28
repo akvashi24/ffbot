@@ -12,7 +12,7 @@ app = Flask(vashi-fantasybot)
 def webhook():
 	data = request.get_json()
 
-	if data['name'] != 'fantasyTester' and data['text'] = 'scoreboard':
+	if data['name'] != 'fantasyTester':
 		bot_id = os.environ.get("FF-GM-ID")
    		league_id = os.environ.get("ESPN-ID")
     	year = 2017
