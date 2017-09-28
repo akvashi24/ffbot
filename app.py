@@ -13,8 +13,8 @@ def webhook():
 	data = request.get_json()
 
 	if data['name'] != 'fantasyTester' and data['text'] = 'scoreboard':
-		bot_id = os.getenv("FF-GM-ID")
-   		league_id = os.getenv("ESPN-ID")
+		bot_id = os.environ.get("FF-GM-ID")
+   		league_id = os.environ.get("ESPN-ID")
     	year = 2017
 		msg = get_scoreboard(league_id, year)
 		send_message(msg)
@@ -33,6 +33,6 @@ def get_scoreboard(league_id, year):
 def send_message(msg):
 	url = 'https://api.groupme.com/v3/bots/post'
 	data = {
-			'bot_id' : os.getenv('FF-GM-ID')
+			'bot_id' : os.environ.get('FF-GM-ID')
 			'text' : msg
 	}
