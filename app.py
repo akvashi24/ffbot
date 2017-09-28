@@ -14,8 +14,8 @@ def webhook():
 
 	if data['name'] != 'fantasyTester':
 		bot_id = os.environ.get("FF-GM-ID")
-   		league_id = os.environ.get("ESPN-ID")
-    	year = 2017
+		league_id = os.environ.get("ESPN-ID")
+		year = 2017
 		msg = get_scoreboard(league_id, year)
 		send_message(msg)
 
