@@ -8,7 +8,7 @@ from flask import Flask, request
 
 app = Flask(vashi-fantasybot)
 
-@app.route('https://git.heroku.com/vashi-fantasybot.git', methods=['POST'])
+@app.route('/', methods=['POST'])
 def webhook():
 	data = request.get_json()
 
