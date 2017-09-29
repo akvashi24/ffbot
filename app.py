@@ -33,7 +33,7 @@ def get_scoreboard(league_id, year):
 def send_message(msg):
 	url = 'https://api.groupme.com/v3/bots/post'
 	template = {
-			'bot_id' : os.environ.get('FF-GM-ID')
+			'bot_id' : os.environ.get('FF-GM-ID'),
 			'text' : msg
 			}
 	data = json.dumps(template)
