@@ -6,7 +6,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
 
-app = Flask(vashi-fantasybot)
+app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def webhook():
@@ -18,7 +18,6 @@ def webhook():
 		year = 2017
 		msg = get_scoreboard(league_id, year)
 		send_message(msg)
-
 
 def get_scoreboard(league_id, year):
     '''Gets current week's scoreboard'''
