@@ -1,0 +1,3 @@
+# Fantasy Football Bot
+
+So I was gonna make a GroupMe bot that hit ESPN for my fantasy football league's scores.  Definitely told a lot of people I was gonna do that.  Turns out the ESPN Fantasy API that I got was defunct.  Maybe I'll get around to a webscraping solution one of these days...
